@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Results</title>
+    <link rel="stylesheet" href="/static/styles/result_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pancreatic Cancer Detection Results</h1>
+    </header>
+    <main>
+        <div class="result-container">
+            <div class="result-box">
+                <h2>Prediction Result</h2>
+                <p>{{ result_message }}</p>
+            </div>
+            <div class="advice-box">
+                <h2>Next Steps</h2>
+                <ul>
+                    <li>Consult your healthcare provider for a detailed diagnosis.</li>
+                    <li>Follow up with additional medical tests if recommended.</li>
+                    <li>Maintain a healthy lifestyle and regular check-ups.</li>
+                </ul>
+            </div>
+            <div class="button-group">
+                <a href="/" class="btn">Go Back</a>
+                <a href="/about" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+    </main>
+    <script src="/static/script/result_script.js"></script>
+</body>
+</html>

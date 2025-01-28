@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancreatic Cancer Detection</title>
+    <link rel="stylesheet" href="/static/styles/index_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pancreatic Cancer Detection</h1>
+        <p>Upload a medical image (CT/MRI) to detect signs of pancreatic cancer.</p>
+        
+        <form action="/upload" method="POST" enctype="multipart/form-data" id="upload-form">
+            <div class="file-upload">
+                <input type="file" name="file" id="file-input" required>
+                <label for="file-input" class="file-label">Choose a file</label>
+            </div>
+            <button type="submit" class="submit-btn" id="submit-btn">Upload & Detect</button>
+        </form>
+        
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div> Processing...
+        </div>
+    </div>
+    <!-- Link to JavaScript file -->
+    <script src="/static/script/index_script.js" defer></script>
+
+</body>
+</html>
