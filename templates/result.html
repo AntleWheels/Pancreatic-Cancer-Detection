@@ -7,29 +7,39 @@
     <link rel="stylesheet" href="/static/styles/result_styles.css">
 </head>
 <body>
-    <header>
-        <h1>Pancreatic Cancer Detection Results</h1>
-    </header>
-    <main>
-        <div class="result-container">
-            <div class="result-box">
-                <h2>Prediction Result</h2>
-                <p>{{ result_message }}</p>
-            </div>
-            <div class="advice-box">
-                <h2>Next Steps</h2>
-                <ul>
-                    <li>Consult your healthcare provider for a detailed diagnosis.</li>
-                    <li>Follow up with additional medical tests if recommended.</li>
-                    <li>Maintain a healthy lifestyle and regular check-ups.</li>
-                </ul>
-            </div>
-            <div class="button-group">
-                <a href="/" class="btn">Go Back</a>
-                <a href="/about" class="btn secondary">Learn More</a>
-            </div>
+    <div class="container">
+        <h1>🔬 Pancreatic Cancer Detection Results</h1>
+
+        <!-- Uploaded Image Preview -->
+        <div class="image-preview">
+            <img src="{{ image_url }}" alt="Uploaded Image">
         </div>
-    </main>
+
+        <!-- Prediction Result Box -->
+        <div class="result-box">
+            <h2>🩺 Prediction Result</h2>
+            <p class="prediction">{{ result_message }}</p>
+            <p class="confidence">Confidence Level: <strong>{{ confidence }}%</strong></p>
+        </div>
+
+        <!-- Next Steps Advice -->
+        <div class="advice-box">
+            <h2>📌 Next Steps</h2>
+            <ul>
+                <li>📋 Consult your healthcare provider for a detailed diagnosis.</li>
+                <li>🩻 Follow up with additional medical tests if recommended.</li>
+                <li>🍎 Maintain a healthy lifestyle and schedule regular check-ups.</li>
+            </ul>
+        </div>
+
+        <!-- Buttons for Navigation -->
+        <div class="button-group">
+            <a href="/" class="btn">🔄 Try Again</a>
+            <a href="/about" class="btn secondary">📖 Learn More</a>
+        </div>
+    </div>
+
     <script src="/static/script/result_script.js"></script>
 </body>
 </html>
+
